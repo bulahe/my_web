@@ -1,5 +1,5 @@
 import Image from "next/image";
-import project from "@/sanity/schemas/project";
+
 import { client } from "../lib/sanity";
 
 interface Data {
