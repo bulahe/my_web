@@ -21,7 +21,9 @@ export default function Home() {
           <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
             Bulahe Chung
           </h3>
-          <p className="text-gray-500 dark:text-gray-300 text-center"></p>
+          <p className="text-gray-500 dark:text-gray-300 text-center">
+            Hey my name is Bulahe Chung and I am a junior student in SJTU
+          </p>
           <div className="flex space-x-5 pt-6">
             {/* github帳戶 */}
             <a href="https://github.com/bulahe" target="_blank">
