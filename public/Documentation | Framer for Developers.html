@@ -1,0 +1,506 @@
+<!DOCTYPE html><html lang="en"><head><link href="https://cdn.sanity.io/" rel="dns-prefetch"/><link href="https://cdn.sanity.io/" rel="preconnect"/><link href="https://www.googletagmanager.com/" rel="dns-prefetch"/><link href="https://www.googletagmanager.com/" rel="preconnect"/><link href="https://www.google-analytics.com/" rel="dns-prefetch"/><link href="https://www.google-analytics.com/" rel="preconnect"/><link href="https://connect.facebook.net/" rel="dns-prefetch"/><link href="https://connect.facebook.net/" rel="preconnect"/><script defer="">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KQFN6BX');</script><script defer="" async="" src="https://accounts.google.com/gsi/client" type="text/javascript"></script><link rel="preload" href="/fonts/GT-Walsheim/GT-Walsheim-Regular-subset.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="preload" href="/fonts/GT-Walsheim/GT-Walsheim-Medium-subset.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="preload" href="/fonts/GT-Walsheim/GT-Walsheim-Bold-subset.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="preload" href="/fonts/GT-Walsheim/GT-Walsheim-Black-subset.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="icon" sizes="16x16" href="/images/favicons/favicon.png"/><link rel="icon" sizes="32x32" href="/images/favicons/favicon.png"/><link rel="mask-icon" color="#000" href="/images/favicons/favicon.svg"/><link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/iOS/120.png"/><link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/iOS/152.png"/><link rel="apple-touch-icon" sizes="167x167" href="/images/favicons/iOS/167.png"/><link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/iOS/180.png"/><link rel="icon" sizes="192x192" href="/images/favicons/icon.png"/><meta charSet="utf-8"/><title>Documentation | Framer for Developers</title><meta name="description" content="An open source, production-ready motion library for React on the web."/><meta name="title" content="Documentation | Framer for Developers"/><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/><link rel="canonical" href="https://www.framer.com/motion/"/><meta property="fb:app_id" content="216342412279020"/><meta property="og:type" content="product"/><meta property="og:url" content="https://www.framer.com/motion/"/><meta property="og:title" content="Documentation | Framer for Developers"/><meta property="og:description" content="An open source, production-ready motion library for React on the web."/><meta property="og:image" content="https://www.framer.com/images/social/api.png"/><meta name="twitter:card" content="photo"/><meta name="twitter:site" content="@framer"/><meta name="twitter:creator" content="@framer"/><meta name="twitter:title" content="Documentation | Framer for Developers"/><meta name="twitter:description" content="An open source, production-ready motion library for React on the web."/><meta name="twitter:image:src" content="https://www.framer.com/images/social/api.png"/><meta itemProp="name" content="Documentation | Framer for Developers"/><meta itemProp="description" content="An open source, production-ready motion library for React on the web."/><meta itemProp="image" content="https://www.framer.com/images/social/api.png"/><meta name="mobile-web-app-capable" content="yes"/><meta name="google-site-verification" content="GyfgsXGMAhgkxb6h-hmxb6ox7PyrFp9lPEkjXDc-pRw"/><meta name="facebook-domain-verification" content="2s76n8inov6o9iihmbslm0hnwfi7wp"/><style>:root {
+  --system-backdrop-default: blur(12px) saturate(120%);
+--system-backdrop-medium: blur(16px) saturate(120%);
+--system-backdrop-heavy: blur(42px) saturate(120%);
+  --system-color-avatar: hsla(0, 0%, 0%, 0.05);
+--system-color-accordion: hsl(0, 0%, 97%);
+--system-color-accordionLight: hsl(0, 0%, 99%);
+--system-color-border: hsla(0, 0%, 0%, 0.05);
+--system-color-button: hsla(0, 0%, 0%, 0.02);
+--system-color-buttonColor: hsla(0, 0%, 0%, 0.8);
+--system-color-buttonDanger: hsl(345, 100%, 60%);
+--system-color-buttonDangerColor: hsl(0, 0%, 100%);
+--system-color-buttonDangerHover: hsl(347, 82%, 54%);
+--system-color-buttonHover: hsla(0, 0%, 0%, 0.05);
+--system-color-buttonSuccess: hsl(160, 100%, 40%);
+--system-color-buttonSuccessColor: hsl(0, 0%, 100%);
+--system-color-buttonSuccessHover: hsl(159, 100%, 37%);
+--system-color-codeBackground: hsla(0, 0%, 0%, 0.03);
+--system-color-codeBlockBackground: hsla(0, 0%, 0%, 0.02);
+--system-color-codeColor: hsla(0, 0%, 0%, 0.6);
+--system-color-codeCopyBackground: hsla(0, 0%, 0%, 0.1);
+--system-color-codeCopyColor: hsla(0, 0%, 0%, 0.7);
+--system-color-codeDimmed1: #999;
+--system-color-codeDimmed2: #bbb;
+--system-color-codeDimmed3: #eee;
+--system-color-codeScrollbarThumb: hsla(0, 0%, 0%, 0.1);
+--system-color-codeScrollbarThumbHover: hsla(0, 0%, 0%, 0.15);
+--system-color-codeSelection: hsla(0, 0%, 0%, 0.05);
+--system-color-codeTint1: #fa0;
+--system-color-codeTint2: #3ae;
+--system-color-codeTint3: #f97;
+--system-color-codeTint4: #0bc;
+--system-color-codeTint5: #85f;
+--system-color-codeTint6: #0bf;
+--system-color-footerColor: hsla(0, 0%, 0%, 0.8);
+--system-color-footerHeadingColor: hsl(0, 0%, 0%);
+--system-color-footerSecondaryColor: hsla(0, 0%, 0%, 0.4);
+--system-color-input: hsl(0, 0%, 97%);
+--system-color-inputTransparent: hsla(0,0%,97%,0);
+--system-color-inputColor: hsla(0, 0%, 0%, 0.9);
+--system-color-inputDangerColor: hsl(345, 100%, 60%);
+--system-color-inputDangerFocusBorder: hsl(345, 100%, 60%);
+--system-color-inputDisabledColor: hsla(0, 0%, 0%, 0.2);
+--system-color-inputPlaceholderColor: hsla(0, 0%, 0%, 0.3);
+--system-color-modal: hsl(0, 0%, 100%);
+--system-color-navigation: hsl(0, 0%, 100%);
+--system-color-navigationAbove: hsl(0, 0%, 100%);
+--system-color-navigationLight: hsla(0, 0%, 0%, 0.05);
+--system-color-navigationBorder: hsla(0, 0%, 0%, 0.05);
+--system-color-navigationColor: hsl(0, 0%, 0%);
+--system-color-navigationThemeColor: hsl(0, 0%, 0%);
+--system-color-navigationMediumColor: hsla(0, 0%, 0%, 0.6);
+--system-color-navigationLightColor: hsla(0, 0%, 0%, 0.5);
+--system-color-outline: rgba(0, 0, 0, 0.05);
+--system-color-overlay: hsla(0, 0%, 0%, 0.5);
+--system-color-page: hsl(0, 0%, 100%);
+--system-color-pageTransparent: hsla(0,0%,100%,0);
+--system-color-pageColor: hsla(0, 0%, 0%, 0.95);
+--system-color-pageColorLight: hsla(0, 0%, 0%, 0.7);
+--system-color-pageColorLighter: hsla(0, 0%, 0%, 0.5);
+--system-color-pageColorLightest: hsla(0, 0%, 0%, 0.3);
+--system-color-plane: hsl(0, 0%, 100%);
+--system-color-primary: hsl(204, 100%, 50%);
+--system-color-primaryDark: hsl(206, 100%, 47%);
+--system-color-segmentedControl: hsl(0, 0%, 100%);
+--system-color-segmentedControlSeparator: hsla(0, 0%, 0%, 0.05);
+--system-color-segmentedControlColor: hsla(0, 0%, 0%, 0.5);
+--system-color-selection: hsl(202, 100%, 54%);
+--system-color-selectionColor: hsl(0, 0%, 100%);
+--system-color-sheet: hsl(0, 0%, 100%);
+--system-color-sheetFlat: hsl(0, 0%, 98%);
+--system-color-sheetOutline: hsl(0, 0%, 97%);
+--system-color-searchActive: hsla(0, 0%, 0%, 0.05);
+--system-color-searchColor: hsla(0, 0%, 0%, 0.4);
+--system-color-searchSeparator: hsla(0, 0%, 0%, 0.05);
+--system-color-tableCheckerboard: hsla(0, 0%, 0%, 0.02);
+--system-color-wireframe: hsla(345,100%,60%,0.08);
+  --system-depth-high: 10;
+--system-depth-higher: 20;
+--system-depth-highest: 30;
+--system-depth-beforeNavigation: 9999;
+--system-depth-navigation: 10000;
+--system-depth-afterNavigation: 10001;
+--system-depth-beforeOverlay: 19999;
+--system-depth-overlay: 20000;
+--system-depth-afterOverlay: 20001;
+--system-depth-wireframe: 30000;
+  --system-dimension-gutter: 20px;
+--system-dimension-fontSize: 20px;
+--system-dimension-fontSizeTablet: 18px;
+--system-dimension-fontSizeMobile: 16px;
+--system-dimension-fontSizeMinimum: 14px;
+--system-dimension-navigationHeight: 80px;
+--system-dimension-navigationSubnavigationHeight: 40px;
+--system-dimension-navigationBannerHeight: 32px;
+--system-dimension-buttonHeight: 52px;
+--system-dimension-buttonHeightSmall: 40px;
+--system-dimension-buttonHeightSmaller: 32px;
+--system-dimension-buttonHeightLarge: 62px;
+--system-dimension-buttonRadius: 14px;
+--system-dimension-buttonRadiusSmall: 10px;
+--system-dimension-buttonRadiusSmaller: 8px;
+--system-dimension-buttonRadiusLarge: 16px;
+--system-dimension-buttonPadding: 20px;
+--system-dimension-buttonPaddingSmall: 16px;
+--system-dimension-buttonPaddingSmaller: 12px;
+--system-dimension-buttonPaddingLarge: 28px;
+--system-dimension-cardPadding: 36px;
+--system-dimension-cardPaddingSmall: 24px;
+--system-dimension-cardRadius: 16px;
+--system-dimension-cardRadiusSmall: 8px;
+--system-dimension-checkboxRadius: 8px;
+--system-dimension-checkboxRadiusSmall: 4px;
+--system-dimension-checkboxSize: 24px;
+--system-dimension-checkboxSizeSmall: 16px;
+--system-dimension-formSpacing: 8px;
+--system-dimension-modalWidth: 480px;
+--system-dimension-modalRadius: 20px;
+--system-dimension-pivotRadiusSmall: 16px;
+--system-dimension-pivotRadius: 20px;
+--system-dimension-pivotRadiusLarge: 24px;
+  --system-family-default: GT Walsheim, Helvetica Neue, Helvetica, Arial, sans-serif;
+--system-family-mono: Input Mono, SF Mono, Menlo, Monaco, Courier, monospace;
+--system-family-scribble: Nanum Pen Script, sans-serif;
+--system-family-interface: Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --system-palette-transparent: transparent;
+--system-palette-white: hsl(0, 0%, 100%);
+--system-palette-white95: hsla(0, 0%, 100%, 0.95);
+--system-palette-white90: hsla(0, 0%, 100%, 0.9);
+--system-palette-white80: hsla(0, 0%, 100%, 0.8);
+--system-palette-white70: hsla(0, 0%, 100%, 0.7);
+--system-palette-white60: hsla(0, 0%, 100%, 0.6);
+--system-palette-white50: hsla(0, 0%, 100%, 0.5);
+--system-palette-white40: hsla(0, 0%, 100%, 0.4);
+--system-palette-white30: hsla(0, 0%, 100%, 0.3);
+--system-palette-white20: hsla(0, 0%, 100%, 0.2);
+--system-palette-white15: hsla(0, 0%, 100%, 0.15);
+--system-palette-white12: hsla(0, 0%, 100%, 0.12);
+--system-palette-white10: hsla(0, 0%, 100%, 0.1);
+--system-palette-white08: hsla(0, 0%, 100%, 0.08);
+--system-palette-white07: hsla(0, 0%, 100%, 0.07);
+--system-palette-white05: hsla(0, 0%, 100%, 0.05);
+--system-palette-white02: hsla(0, 0%, 100%, 0.02);
+--system-palette-black: hsl(0, 0%, 0%);
+--system-palette-black95: hsla(0, 0%, 0%, 0.95);
+--system-palette-black90: hsla(0, 0%, 0%, 0.9);
+--system-palette-black80: hsla(0, 0%, 0%, 0.8);
+--system-palette-black70: hsla(0, 0%, 0%, 0.7);
+--system-palette-black60: hsla(0, 0%, 0%, 0.6);
+--system-palette-black50: hsla(0, 0%, 0%, 0.5);
+--system-palette-black40: hsla(0, 0%, 0%, 0.4);
+--system-palette-black30: hsla(0, 0%, 0%, 0.3);
+--system-palette-black20: hsla(0, 0%, 0%, 0.2);
+--system-palette-black15: hsla(0, 0%, 0%, 0.15);
+--system-palette-black12: hsla(0, 0%, 0%, 0.12);
+--system-palette-black10: hsla(0, 0%, 0%, 0.1);
+--system-palette-black07: hsla(0, 0%, 0%, 0.07);
+--system-palette-black05: hsla(0, 0%, 0%, 0.05);
+--system-palette-black03: hsla(0, 0%, 0%, 0.03);
+--system-palette-black02: hsla(0, 0%, 0%, 0.02);
+--system-palette-gray02: hsl(0, 0%, 2%);
+--system-palette-gray04: hsl(0, 0%, 4%);
+--system-palette-gray06: hsl(0, 0%, 6%);
+--system-palette-gray08: hsl(0, 0%, 8%);
+--system-palette-gray10: hsl(0, 0%, 10%);
+--system-palette-gray14: hsl(0, 0%, 14%);
+--system-palette-gray19: hsl(0, 0%, 19%);
+--system-palette-gray24: hsl(0, 0%, 24%);
+--system-palette-gray37: hsl(0, 0%, 37%);
+--system-palette-gray54: hsl(0, 0%, 54%);
+--system-palette-gray70: hsl(0, 0%, 70%);
+--system-palette-gray83: hsl(0, 0%, 83%);
+--system-palette-gray92: hsl(0, 0%, 92%);
+--system-palette-gray95: hsl(0, 0%, 95%);
+--system-palette-gray97: hsl(0, 0%, 97%);
+--system-palette-gray98: hsl(0, 0%, 98%);
+--system-palette-gray99: hsl(0, 0%, 99%);
+--system-palette-oceanLightest: hsl(208, 100%, 90%);
+--system-palette-oceanLighter: hsl(212, 100%, 59%);
+--system-palette-oceanLight: hsl(214, 100%, 54%);
+--system-palette-ocean: hsl(216, 100%, 50%);
+--system-palette-oceanDark: hsl(218, 100%, 47%);
+--system-palette-oceanDarker: hsl(220, 100%, 43%);
+--system-palette-oceanDarkest: hsl(224, 100%, 18%);
+--system-palette-blueLightest: hsl(196, 100%, 90%);
+--system-palette-blueLighter: hsl(200, 100%, 59%);
+--system-palette-blueLight: hsl(202, 100%, 54%);
+--system-palette-blue: hsl(204, 100%, 50%);
+--system-palette-blueDark: hsl(206, 100%, 47%);
+--system-palette-blueDarker: hsl(208, 100%, 43%);
+--system-palette-blueDarkest: hsl(212, 100%, 20%);
+--system-palette-skyLightest: hsl(188, 100%, 89%);
+--system-palette-skyLighter: hsl(192, 100%, 59%);
+--system-palette-skyLight: hsl(194, 100%, 54%);
+--system-palette-sky: hsl(196, 100%, 50%);
+--system-palette-skyDark: hsl(198, 100%, 47%);
+--system-palette-skyDarker: hsl(200, 100%, 43%);
+--system-palette-skyDarkest: hsl(204, 100%, 20%);
+--system-palette-tealLightest: hsl(172, 73%, 88%);
+--system-palette-tealLighter: hsl(176, 88%, 64%);
+--system-palette-tealLight: hsl(178, 80%, 56%);
+--system-palette-teal: hsl(180, 73%, 50%);
+--system-palette-tealDark: hsl(182, 73%, 47%);
+--system-palette-tealDarker: hsl(184, 73%, 43%);
+--system-palette-tealDarkest: hsl(188, 73%, 18%);
+--system-palette-greenLightest: hsl(166, 80%, 88%);
+--system-palette-greenLighter: hsl(162, 76%, 58%);
+--system-palette-greenLight: hsl(161, 92%, 45%);
+--system-palette-green: hsl(160, 100%, 40%);
+--system-palette-greenDark: hsl(159, 100%, 37%);
+--system-palette-greenDarker: hsl(158, 100%, 33%);
+--system-palette-greenDarkest: hsl(152, 100%, 14%);
+--system-palette-yellowLightest: hsl(52, 100%, 88%);
+--system-palette-yellowLighter: hsl(48, 100%, 61%);
+--system-palette-yellowLight: hsl(46, 100%, 56%);
+--system-palette-yellow: hsl(44, 100%, 50%);
+--system-palette-yellowDark: hsl(42, 100%, 46%);
+--system-palette-yellowDarker: hsl(40, 100%, 42%);
+--system-palette-yellowDarkest: hsl(36, 100%, 20%);
+--system-palette-orangeLightest: hsl(41, 100%, 90%);
+--system-palette-orangeLighter: hsl(37, 100%, 61%);
+--system-palette-orangeLight: hsl(35, 100%, 56%);
+--system-palette-orange: hsl(33, 100%, 50%);
+--system-palette-orangeDark: hsl(31, 100%, 46%);
+--system-palette-orangeDarker: hsl(30, 100%, 42%);
+--system-palette-orangeDarkest: hsl(26, 100%, 20%);
+--system-palette-redLightest: hsl(337, 100%, 94%);
+--system-palette-redLighter: hsl(341, 100%, 71%);
+--system-palette-redLight: hsl(343, 100%, 66%);
+--system-palette-red: hsl(345, 100%, 60%);
+--system-palette-redDark: hsl(347, 82%, 54%);
+--system-palette-redDarker: hsl(349, 72%, 46%);
+--system-palette-redDarkest: hsl(353, 100%, 18%);
+--system-palette-pinkLightest: hsl(328, 100%, 94%);
+--system-palette-pinkLighter: hsl(332, 100%, 75%);
+--system-palette-pinkLight: hsl(334, 100%, 71%);
+--system-palette-pink: hsl(336, 100%, 67%);
+--system-palette-pinkDark: hsl(338, 80%, 60%);
+--system-palette-pinkDarker: hsl(338, 59%, 51%);
+--system-palette-pinkDarkest: hsl(346, 100%, 18%);
+--system-palette-purpleLightest: hsl(265, 100%, 94%);
+--system-palette-purpleLighter: hsl(260, 100%, 74%);
+--system-palette-purpleLight: hsl(259, 100%, 71%);
+--system-palette-purple: hsl(258, 100%, 67%);
+--system-palette-purpleDark: hsl(257, 80%, 60%);
+--system-palette-purpleDarker: hsl(256, 62%, 52%);
+--system-palette-purpleDarkest: hsl(252, 69%, 20%);
+  --system-shadow-0: null;
+--system-shadow-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+--system-shadow-2: 0 6px 12px 0 rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.04);
+--system-shadow-3: 0 6px 8px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+--system-shadow-4: 0 8px 12px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  --system-size-0: 0px;
+--system-size-1: 12px;
+--system-size-2: 14px;
+--system-size-3: min(calc(1rem * (16 / (var(--system-dimension-fontSizeDynamic) + 0.3333333333333333 * var(--system-dimension-fontSizeDifference)))), 16px);
+--system-size-4: min(calc(1rem * (18 / (var(--system-dimension-fontSizeDynamic) + 0.6666666666666666 * var(--system-dimension-fontSizeDifference)))), 18px);
+--system-size-5: 1rem;
+--system-size-6: 1.2rem;
+--system-size-7: 1.4rem;
+--system-size-8: 2rem;
+--system-size-9: 2.6rem;
+--system-size-10: 3.2rem;
+--system-size-11: 4rem;
+--system-size-12: 5.8rem;
+  --system-space-0: 0px;
+--system-space-1: 4px;
+--system-space-2: 8px;
+--system-space-3: 12px;
+--system-space-4: 16px;
+--system-space-5: 24px;
+--system-space-6: 32px;
+--system-space-7: 48px;
+--system-space-8: 64px;
+--system-space-9: 88px;
+  --system-weight-thin: 200;
+--system-weight-light: 300;
+--system-weight-regular: 400;
+--system-weight-medium: 500;
+--system-weight-bold: 600;
+--system-weight-black: 800;
+  --system-width-0: 0px;
+--system-width-1: 300px;
+--system-width-2: 400px;
+--system-width-3: 500px;
+--system-width-4: 600px;
+--system-width-5: 700px;
+--system-width-6: 800px;
+--system-width-7: 900px;
+--system-width-8: 1000px;
+--system-width-9: 1200px;
+--system-width-10: 1400px;
+}
+
+[data-theme="light"], #__root[data-navigation-theme="light"] #__navigation {
+  --system-color-avatar: hsla(0, 0%, 0%, 0.05);
+--system-color-accordion: hsl(0, 0%, 97%);
+--system-color-accordionLight: hsl(0, 0%, 99%);
+--system-color-border: hsla(0, 0%, 0%, 0.05);
+--system-color-button: hsla(0, 0%, 0%, 0.02);
+--system-color-buttonColor: hsla(0, 0%, 0%, 0.8);
+--system-color-buttonDanger: hsl(345, 100%, 60%);
+--system-color-buttonDangerColor: hsl(0, 0%, 100%);
+--system-color-buttonDangerHover: hsl(347, 82%, 54%);
+--system-color-buttonHover: hsla(0, 0%, 0%, 0.05);
+--system-color-buttonSuccess: hsl(160, 100%, 40%);
+--system-color-buttonSuccessColor: hsl(0, 0%, 100%);
+--system-color-buttonSuccessHover: hsl(159, 100%, 37%);
+--system-color-codeBackground: hsla(0, 0%, 0%, 0.03);
+--system-color-codeBlockBackground: hsla(0, 0%, 0%, 0.02);
+--system-color-codeColor: hsla(0, 0%, 0%, 0.6);
+--system-color-codeCopyBackground: hsla(0, 0%, 0%, 0.1);
+--system-color-codeCopyColor: hsla(0, 0%, 0%, 0.7);
+--system-color-codeDimmed1: #999;
+--system-color-codeDimmed2: #bbb;
+--system-color-codeDimmed3: #eee;
+--system-color-codeScrollbarThumb: hsla(0, 0%, 0%, 0.1);
+--system-color-codeScrollbarThumbHover: hsla(0, 0%, 0%, 0.15);
+--system-color-codeSelection: hsla(0, 0%, 0%, 0.05);
+--system-color-codeTint1: #fa0;
+--system-color-codeTint2: #3ae;
+--system-color-codeTint3: #f97;
+--system-color-codeTint4: #0bc;
+--system-color-codeTint5: #85f;
+--system-color-codeTint6: #0bf;
+--system-color-footerColor: hsla(0, 0%, 0%, 0.8);
+--system-color-footerHeadingColor: hsl(0, 0%, 0%);
+--system-color-footerSecondaryColor: hsla(0, 0%, 0%, 0.4);
+--system-color-input: hsl(0, 0%, 97%);
+--system-color-inputTransparent: hsla(0,0%,97%,0);
+--system-color-inputColor: hsla(0, 0%, 0%, 0.9);
+--system-color-inputDangerColor: hsl(345, 100%, 60%);
+--system-color-inputDangerFocusBorder: hsl(345, 100%, 60%);
+--system-color-inputDisabledColor: hsla(0, 0%, 0%, 0.2);
+--system-color-inputPlaceholderColor: hsla(0, 0%, 0%, 0.3);
+--system-color-modal: hsl(0, 0%, 100%);
+--system-color-navigation: hsl(0, 0%, 100%);
+--system-color-navigationAbove: hsl(0, 0%, 100%);
+--system-color-navigationLight: hsla(0, 0%, 0%, 0.05);
+--system-color-navigationBorder: hsla(0, 0%, 0%, 0.05);
+--system-color-navigationColor: hsl(0, 0%, 0%);
+--system-color-navigationThemeColor: hsl(0, 0%, 0%);
+--system-color-navigationMediumColor: hsla(0, 0%, 0%, 0.6);
+--system-color-navigationLightColor: hsla(0, 0%, 0%, 0.5);
+--system-color-outline: rgba(0, 0, 0, 0.05);
+--system-color-overlay: hsla(0, 0%, 0%, 0.5);
+--system-color-page: hsl(0, 0%, 100%);
+--system-color-pageTransparent: hsla(0,0%,100%,0);
+--system-color-pageColor: hsla(0, 0%, 0%, 0.95);
+--system-color-pageColorLight: hsla(0, 0%, 0%, 0.7);
+--system-color-pageColorLighter: hsla(0, 0%, 0%, 0.5);
+--system-color-pageColorLightest: hsla(0, 0%, 0%, 0.3);
+--system-color-plane: hsl(0, 0%, 100%);
+--system-color-primary: hsl(204, 100%, 50%);
+--system-color-primaryDark: hsl(206, 100%, 47%);
+--system-color-segmentedControl: hsl(0, 0%, 100%);
+--system-color-segmentedControlSeparator: hsla(0, 0%, 0%, 0.05);
+--system-color-segmentedControlColor: hsla(0, 0%, 0%, 0.5);
+--system-color-selection: hsl(202, 100%, 54%);
+--system-color-selectionColor: hsl(0, 0%, 100%);
+--system-color-sheet: hsl(0, 0%, 100%);
+--system-color-sheetFlat: hsl(0, 0%, 98%);
+--system-color-sheetOutline: hsl(0, 0%, 97%);
+--system-color-searchActive: hsla(0, 0%, 0%, 0.05);
+--system-color-searchColor: hsla(0, 0%, 0%, 0.4);
+--system-color-searchSeparator: hsla(0, 0%, 0%, 0.05);
+--system-color-tableCheckerboard: hsla(0, 0%, 0%, 0.02);
+--system-color-wireframe: hsla(345,100%,60%,0.08);
+}
+
+[data-theme="dark"], #__root[data-navigation-theme="dark"] #__navigation {
+  --system-color-avatar: hsla(0, 0%, 100%, 0.07);
+--system-color-accordion: hsl(0, 0%, 19%);
+--system-color-accordionLight: hsl(0, 0%, 14%);
+--system-color-border: hsla(0, 0%, 100%, 0.07);
+--system-color-button: hsla(0, 0%, 100%, 0.07);
+--system-color-buttonColor: hsl(0, 0%, 100%);
+--system-color-buttonDanger: hsl(345, 100%, 60%);
+--system-color-buttonDangerColor: hsl(0, 0%, 100%);
+--system-color-buttonDangerHover: hsl(347, 82%, 54%);
+--system-color-buttonHover: hsla(0, 0%, 100%, 0.1);
+--system-color-buttonSuccess: hsl(160, 100%, 40%);
+--system-color-buttonSuccessColor: hsl(0, 0%, 100%);
+--system-color-buttonSuccessHover: hsl(159, 100%, 37%);
+--system-color-codeBackground: hsla(0, 0%, 100%, 0.1);
+--system-color-codeBlockBackground: hsla(0, 0%, 100%, 0.08);
+--system-color-codeColor: hsla(0, 0%, 100%, 0.9);
+--system-color-codeCopyBackground: hsla(0, 0%, 0%, 0.3);
+--system-color-codeCopyColor: hsl(0, 0%, 100%);
+--system-color-codeDimmed1: #999;
+--system-color-codeDimmed2: #666;
+--system-color-codeDimmed3: #444;
+--system-color-codeScrollbarThumb: hsla(0, 0%, 100%, 0.2);
+--system-color-codeScrollbarThumbHover: hsla(0, 0%, 100%, 0.3);
+--system-color-codeSelection: hsla(0, 0%, 100%, 0.2);
+--system-color-codeTint1: #fc6;
+--system-color-codeTint2: #adf;
+--system-color-codeTint3: #f97;
+--system-color-codeTint4: #2cd;
+--system-color-codeTint5: #b8f;
+--system-color-codeTint6: #0bf;
+--system-color-footerColor: hsla(0, 0%, 100%, 0.8);
+--system-color-footerHeadingColor: hsla(0, 0%, 100%, 0.9);
+--system-color-footerSecondaryColor: hsla(0, 0%, 100%, 0.4);
+--system-color-input: hsl(0, 0%, 19%);
+--system-color-inputTransparent: hsla(0,0%,14%,0);
+--system-color-inputColor: hsla(0, 0%, 100%, 0.9);
+--system-color-inputDangerColor: hsl(345, 100%, 60%);
+--system-color-inputDangerFocusBorder: hsl(345, 100%, 60%);
+--system-color-inputDisabledColor: hsla(0, 0%, 100%, 0.2);
+--system-color-inputPlaceholderColor: hsla(0, 0%, 100%, 0.3);
+--system-color-modal: hsl(0, 0%, 10%);
+--system-color-navigation: hsl(0, 0%, 10%);
+--system-color-navigationAbove: hsl(0, 0%, 14%);
+--system-color-navigationLight: hsla(0, 0%, 100%, 0.1);
+--system-color-navigationBorder: hsla(0, 0%, 100%, 0.07);
+--system-color-navigationColor: hsl(0, 0%, 100%);
+--system-color-navigationThemeColor: hsl(0, 0%, 100%);
+--system-color-navigationMediumColor: hsla(0, 0%, 100%, 0.7);
+--system-color-navigationLightColor: hsla(0, 0%, 100%, 0.5);
+--system-color-outline: rgba(255, 255, 255, 0.1);
+--system-color-overlay: hsla(0, 0%, 0%, 0.5);
+--system-color-page: hsl(0, 0%, 10%);
+--system-color-pageTransparent: hsla(0,0%,10%,0);
+--system-color-pageColor: hsl(0, 0%, 100%);
+--system-color-pageColorLight: hsla(0, 0%, 100%, 0.7);
+--system-color-pageColorLighter: hsla(0, 0%, 100%, 0.5);
+--system-color-pageColorLightest: hsla(0, 0%, 100%, 0.3);
+--system-color-plane: hsl(0, 0%, 14%);
+--system-color-primary: hsl(204, 100%, 50%);
+--system-color-primaryDark: hsl(206, 100%, 47%);
+--system-color-segmentedControl: hsla(0, 0%, 100%, 0.1);
+--system-color-segmentedControlSeparator: hsla(0, 0%, 100%, 0.07);
+--system-color-segmentedControlColor: hsla(0, 0%, 100%, 0.4);
+--system-color-selection: hsl(204, 100%, 50%);
+--system-color-selectionColor: hsl(0, 0%, 100%);
+--system-color-sheet: hsl(0, 0%, 14%);
+--system-color-sheetFlat: hsl(0, 0%, 14%);
+--system-color-sheetOutline: hsl(0, 0%, 14%);
+--system-color-searchActive: hsla(0, 0%, 100%, 0.07);
+--system-color-searchColor: hsla(0, 0%, 100%, 0.5);
+--system-color-searchSeparator: hsla(0, 0%, 100%, 0.07);
+--system-color-tableCheckerboard: hsla(0, 0%, 100%, 0.02);
+--system-color-wireframe: hsla(345,100%,60%,0.08);
+}</style><style>:root {
+  --page-color-backdrop: hsl(0, 0%, 10%);
+  --page-color-primary: var(--system-palette-sky);
+
+  
+  --navigation-height: 80px;
+
+  scroll-behavior: auto;
+}</style><meta name="next-head-count" content="38"/><link rel="preload" href="/_next/static/css/a1f33e27001d839b3954.css" as="style"/><link rel="stylesheet" href="/_next/static/css/a1f33e27001d839b3954.css" data-n-g=""/><link rel="preload" href="/_next/static/css/94635f4a9e0785810469.css" as="style"/><link rel="stylesheet" href="/_next/static/css/94635f4a9e0785810469.css" data-n-p=""/><link rel="preload" href="/_next/static/css/1bf5520551b41a618fbb.css" as="style"/><link rel="stylesheet" href="/_next/static/css/1bf5520551b41a618fbb.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-a40ef1678bae11e696dba45124eadd70.js"></script><script defer="" src="/_next/static/chunks/9235.476fd0128987a6a48fef.js"></script><script src="/_next/static/chunks/webpack-f3c641e810042a858e07.js" defer=""></script><script src="/_next/static/chunks/framework-336caa3f6419768205fe.js" defer=""></script><script src="/_next/static/chunks/main-a3d202dbe74dc08b5ac7.js" defer=""></script><script src="/_next/static/chunks/pages/_app-ebbe7ba1f11753a164ef.js" defer=""></script><script src="/_next/static/chunks/5473-8964a7e70cf6fb6832bc.js" defer=""></script><script src="/_next/static/chunks/pages/motion-4ff4ee02728c812b5521.js" defer=""></script><script src="/_next/static/AUvxChJGHhZSjsWsNZlWG/_buildManifest.js" defer=""></script><script src="/_next/static/AUvxChJGHhZSjsWsNZlWG/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div id="__root" data-scroll-top="true" data-transition="false" class="margin-navigation margin-footer" style="--navigation-color-primary:var(--system-palette-sky)" data-theme="dark" data-navigation-theme="dark"><header class="Navigation_header__RJBmS unknown width-default" id="__navigation"><nav class="Navigation_mobile__2YKXC mobile Navigation_navigation__ws0RU"><div class="Navigation_background__1Qnni"></div><div class="Navigation_container__3QoHl Container_container__1h3U7 container size-default Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd"><a href="/motion/" data-link="true" class="Navigation_logo__2CypI Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><svg xmlns="http:www.w3.org/2000/svg" viewBox="0 0 14 21" role="presentation"><path d="M0 0h14v7H7zm0 7h7l7 7H7v7l-7-7z" fill="currentColor"></path></svg><span class="Navigation_logoWordmark__17rYp">Motion</span></a><a class="Navigation_button__3hdW1 Navigation_action__1K43e Navigation_primaryButton__3M8cj" href="/"><div class="Navigation_buttonContent__1mBav"><span class="Navigation_buttonLabel__VSjfc">Back to framer.com</span></div></a></div><div class="Navigation_subnavigation__3imaJ subnavigation"><div class="Subnavigation_subnavigation__2-w-w docs"><div class="Subnavigation_container__2zcAx Container_container__1h3U7 container size-default Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd"><div class="Subnavigation_section__1hhcE"><div class="Subnavigation_breadcrumbs__2Oy_D"><a href="/motion/" data-link="true" class="Subnavigation_breadcrumb__14avw Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Documentation</a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 9" class="Subnavigation_breadcrumbArrow__2pCG7" role="presentation"><path d="M1.5 1.5l3 3-3 3" fill="transparent" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg><div class="Subnavigation_select__5cA3Q">Motion<select><option value="">Home</option><optgroup label="Getting started"><option value="introduction">Introduction</option><option value="examples">Examples</option></optgroup><optgroup label="Animation"><option value="animation">Overview</option><option value="layout-animations">Layout</option><option value="gestures">Gestures</option><option value="scroll-animations">Scroll</option><option value="transition">Transition</option></optgroup><optgroup label="Components"><option value="component">motion</option><option value="animate-presence">AnimatePresence</option><option value="layout-group">LayoutGroup</option><option value="lazy-motion">LazyMotion</option><option value="motion-config">MotionConfig</option><option value="reorder">Reorder</option></optgroup><optgroup label="Motion values"><option value="motionvalue">Overview</option><option value="use-motion-value-event">useMotionValueEvent</option><option value="use-motion-template">useMotionTemplate</option><option value="use-scroll">useScroll</option><option value="use-spring">useSpring</option><option value="use-time">useTime</option><option value="use-transform">useTransform</option><option value="use-velocity">useVelocity</option><option value="use-will-change">useWillChange</option></optgroup><optgroup label="Hooks"><option value="use-animate">useAnimate</option><option value="use-animation-frame">useAnimationFrame</option><option value="use-drag-controls">useDragControls</option><option value="use-in-view">useInView</option><option value="use-reduced-motion">useReducedMotion</option></optgroup><optgroup label="Universal"><option value="animate-function">animate</option><option value="scroll-function">scroll</option><option value="in-view">inView</option><option value="transform-function">transform</option><option value="stagger">stagger</option><option value="frame">frame</option><option value="easing-functions">Easing functions</option></optgroup><optgroup label="3D"><option value="three-introduction">Introduction</option><option value="layoutcamera">LayoutCamera</option><option value="layoutorthographiccamera">LayoutOrthographicCamera</option><option value="motioncanvas">MotionCanvas</option></optgroup><optgroup label="Guides"><option value="guide-accessibility">Accessibility</option><option value="guide-reduce-bundle-size">Reduce bundle size</option><option value="guide-upgrade">Upgrade guides</option></optgroup></select><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 6" role="presentation"><path d="M.371 2.995A.6.6 0 01.822 2h4.356a.6.6 0 01.451.995L3.602 5.312a.8.8 0 01-1.204 0z" fill="currentColor"></path></svg></div></div></div><div class="Subnavigation_section__1hhcE"></div></div></div></div></nav><nav class="Navigation_desktop__3On8O desktop Navigation_navigation__ws0RU"><div class="Navigation_background__1Qnni"></div><div class="Navigation_container__3QoHl Container_container__1h3U7 container size-full fluid Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd"><div class="Navigation_main__29gvl"><a href="/motion/" data-link="true" class="Navigation_logo__2CypI Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><svg xmlns="http:www.w3.org/2000/svg" viewBox="0 0 14 21" role="presentation"><path d="M0 0h14v7H7zm0 7h7l7 7H7v7l-7-7z" fill="currentColor"></path></svg><span class="Navigation_logoWordmark__17rYp">Motion</span></a><div class="Navigation_actions__9w2ov"><a class="Navigation_button__3hdW1 Navigation_secondaryButton__1K96t Navigation_action__1K43e" href="/" data-test="navigation-sign-in-button">Back to framer.com</a></div></div></div></nav></header><div class="_app_flap__O3Hq2"><div style="min-height:246px;min-width:395px;overflow:hidden;padding:12px 2px 2px 2px;border-radius:10px;box-shadow:0px 0.796841278193901px 1.4343143007490218px -0.75px rgba(0, 0, 0, 0.15), 0px 2.413677098392273px 4.344618777106091px -1.5px rgba(0, 0, 0, 0.14397), 0px 6.3802836426702925px 11.484510556806526px -2.25px rgba(0, 0, 0, 0.13405), 0px 20px 36px -3px rgba(0, 0, 0, 0.1);background:linear-gradient(45deg, rgba(0,136,255,1) 0%, rgba(153,0,255,1) 100%);pointer-events:none;opacity:0;transform:translateY(4px) translateZ(0)"><div style="font-family:GT Walsheim Bold, Sans Serif;font-size:18px;text-align:center;max-width:260px;margin:auto;margin-bottom:4px;letter-spacing:-0.2px;line-height:1.2;color:#fff">Design and publish your first free site today.</div><div id="g_id_onload" data-login_uri="https://www.framer.com/api-proxy/auth-google-one-tap-callback" data-client_id="494526493439-djlkk2cal7r0lijnrd6en51c9vo4icgp.apps.googleusercontent.com" data-state_cookie_domain="framer.com" data-auto_prompt="false" data-prompt_parent_id="g_id_onload" data-cancel_on_tap_outside="false" data-itp_support="true"></div></div></div><main id="__main" class=""><div class="Layout_layout__2tTEt Container_container__1h3U7 container size-full Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd"><div class="Layout_aside__1wDoh Layout_navigation__3nLC1 Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Layout_asideContent__2cb83 Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Navigation_categories__3xDuX Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Navigation_category__AJ9pP Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h5>Getting started</h5><ul class="Navigation_pages__2WCUY"><li class="Navigation_page__1HleC"><a href="/motion/introduction/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Introduction</a></li><li class="Navigation_page__1HleC"><a href="/motion/examples/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Examples</a></li></ul></div><div class="Navigation_category__AJ9pP Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h5>Animation</h5><ul class="Navigation_pages__2WCUY"><li class="Navigation_page__1HleC"><a href="/motion/animation/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Overview</a></li><li class="Navigation_page__1HleC"><a href="/motion/layout-animations/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Layout</a></li><li class="Navigation_page__1HleC"><a href="/motion/gestures/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Gestures</a></li><li class="Navigation_page__1HleC"><a href="/motion/scroll-animations/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Scroll</a></li><li class="Navigation_page__1HleC"><a href="/motion/transition/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Transition</a></li></ul></div><div class="Navigation_category__AJ9pP Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h5>Components</h5><ul class="Navigation_pages__2WCUY"><li class="Navigation_page__1HleC"><a href="/motion/component/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">motion</a></li><li class="Navigation_page__1HleC"><a href="/motion/animate-presence/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">AnimatePresence</a></li><li class="Navigation_page__1HleC"><a href="/motion/layout-group/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">LayoutGroup</a></li><li class="Navigation_page__1HleC"><a href="/motion/lazy-motion/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">LazyMotion</a></li><li class="Navigation_page__1HleC"><a href="/motion/motion-config/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">MotionConfig</a></li><li class="Navigation_page__1HleC"><a href="/motion/reorder/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Reorder</a></li></ul></div><div class="Navigation_category__AJ9pP Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h5>Motion values</h5><ul class="Navigation_pages__2WCUY"><li class="Navigation_page__1HleC"><a href="/motion/motionvalue/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Overview</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-motion-value-event/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useMotionValueEvent</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-motion-template/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useMotionTemplate</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-scroll/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useScroll</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-spring/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useSpring</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-time/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useTime</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-transform/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useTransform</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-velocity/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useVelocity</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-will-change/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useWillChange</a></li></ul></div><div class="Navigation_category__AJ9pP Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h5>Hooks</h5><ul class="Navigation_pages__2WCUY"><li class="Navigation_page__1HleC"><a href="/motion/use-animate/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useAnimate</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-animation-frame/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useAnimationFrame</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-drag-controls/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useDragControls</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-in-view/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useInView</a></li><li class="Navigation_page__1HleC"><a href="/motion/use-reduced-motion/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">useReducedMotion</a></li></ul></div><div class="Navigation_category__AJ9pP Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h5>Universal</h5><ul class="Navigation_pages__2WCUY"><li class="Navigation_page__1HleC"><a href="/motion/animate-function/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">animate</a></li><li class="Navigation_page__1HleC"><a href="/motion/scroll-function/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">scroll</a></li><li class="Navigation_page__1HleC"><a href="/motion/in-view/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">inView</a></li><li class="Navigation_page__1HleC"><a href="/motion/transform-function/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">transform</a></li><li class="Navigation_page__1HleC"><a href="/motion/stagger/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">stagger</a></li><li class="Navigation_page__1HleC"><a href="/motion/frame/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">frame</a></li><li class="Navigation_page__1HleC"><a href="/motion/easing-functions/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Easing functions</a></li></ul></div><div class="Navigation_category__AJ9pP Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h5>3D</h5><ul class="Navigation_pages__2WCUY"><li class="Navigation_page__1HleC"><a href="/motion/three-introduction/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Introduction</a></li><li class="Navigation_page__1HleC"><a href="/motion/layoutcamera/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">LayoutCamera</a></li><li class="Navigation_page__1HleC"><a href="/motion/layoutorthographiccamera/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">LayoutOrthographicCamera</a></li><li class="Navigation_page__1HleC"><a href="/motion/motioncanvas/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">MotionCanvas</a></li></ul></div><div class="Navigation_category__AJ9pP Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h5>Guides</h5><ul class="Navigation_pages__2WCUY"><li class="Navigation_page__1HleC"><a href="/motion/guide-accessibility/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Accessibility</a></li><li class="Navigation_page__1HleC"><a href="/motion/guide-reduce-bundle-size/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Reduce bundle size</a></li><li class="Navigation_page__1HleC"><a href="/motion/guide-upgrade/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Upgrade guides</a></li></ul></div><div class="Navigation_category__AJ9pP Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h5>Community</h5><ul class="Navigation_pages__2WCUY"><li class="Navigation_page__1HleC"><a href="https://github.com/framer/motion" target="_blank" rel="noopener" data-link="false" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">GitHub<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 17L17 7M7 7h10v10" fill="transparent" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li><li class="Navigation_page__1HleC"><a href="/r/discord/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Discord<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 17L17 7M7 7h10v10" fill="transparent" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li></ul></div></div></div></div><div class="Layout_container__1i0cw Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><h1 class="Heading_heading__3iQQf level-1 Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Framer<!-- --> <span class="Highlight_highlight__FGafD Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za" style="--highlight-background:linear-gradient(135deg, #d2c, var(--system-palette-pink))">Motion.</span></h1><p class="Text_text__2SNS0 size-large Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:1rem;font-weight:500">Complete documentation of the Framer Motion animation library. A production-ready motion library for React.</p><a href="/motion/introduction/" data-link="true" class="cta CTA_cta__3iCrj variant-default size-default Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za" style="color:#d2c"><span>Get started</span><span class="CTA_arrowContainer__1HvoG" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="CTA_arrow__17msZ" aria-hidden="true"><path d="M7 1.167L12.833 7 7 12.833M12.25 7H1.167" fill="transparent" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"></path></svg></span></a><div class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-y" style="--margin-y:3rem"><div class="Tiles_tiles__XD5w0 gap gap-tablet gap-laptop columns columns-tablet columns-laptop Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za" style="--gap:20px;--gap-tablet:1rem;--gap-laptop:1rem;--columns:1;--columns-tablet:2;--columns-laptop:3"><div class="Features_feature__XeHmu Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Features_featureContainer__1ZC3-"><div class="Features_featureContent__2tRH-"><div class="Features_square__1T5Ph" style="opacity:0;transform:scale(0) rotate(0deg) translateZ(0)"></div></div><div class="Features_featureDetails__E3ihm"><h4 class="Heading_heading__3iQQf Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Animation</h4><div class="Features_featureButtons__3zcTZ"><button aria-label="Restart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.2 4.654V2a.7.7 0 111.4 0v5a.7.7 0 01-.7.7h-5a.7.7 0 110-1.4h3.573a4.845 4.845 0 00-4.53-3.1C5.266 3.2 3.1 5.35 3.1 8s2.167 4.8 4.842 4.8a4.849 4.849 0 003.426-1.408.7.7 0 01.986.994A6.244 6.244 0 017.942 14.2C4.496 14.2 1.7 11.426 1.7 8s2.796-6.2 6.242-6.2A6.261 6.261 0 0113.2 4.654z" fill="#fff"></path></svg></button><button aria-label="Open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7 7a1 1 0 012 0v7a1 1 0 01-2 0z" fill="#fff"></path><path d="M8 1.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 018 1.5z" fill="#fff"></path></svg></button></div></div></div></div><div class="Features_feature__XeHmu Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Features_featureContainer__1ZC3-"><div class="Features_featureContent__2tRH-"><div class="Features_square__1T5Ph Features_transparentSquare__XuKd1" style="opacity:0;transform:scale(0) translateZ(0)"><div class="Features_containerVariants__3qEbS" style="opacity:0"><div class="Features_itemVariants__3Wek8" style="opacity:0;transform:translateY(20px) translateZ(0)"></div><div class="Features_itemVariants__3Wek8" style="opacity:0;transform:translateY(20px) translateZ(0)"></div><div class="Features_itemVariants__3Wek8" style="opacity:0;transform:translateY(20px) translateZ(0)"></div><div class="Features_itemVariants__3Wek8" style="opacity:0;transform:translateY(20px) translateZ(0)"></div></div></div></div><div class="Features_featureDetails__E3ihm"><h4 class="Heading_heading__3iQQf Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Variants</h4><div class="Features_featureButtons__3zcTZ"><button aria-label="Restart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.2 4.654V2a.7.7 0 111.4 0v5a.7.7 0 01-.7.7h-5a.7.7 0 110-1.4h3.573a4.845 4.845 0 00-4.53-3.1C5.266 3.2 3.1 5.35 3.1 8s2.167 4.8 4.842 4.8a4.849 4.849 0 003.426-1.408.7.7 0 01.986.994A6.244 6.244 0 017.942 14.2C4.496 14.2 1.7 11.426 1.7 8s2.796-6.2 6.242-6.2A6.261 6.261 0 0113.2 4.654z" fill="#fff"></path></svg></button><button aria-label="Open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7 7a1 1 0 012 0v7a1 1 0 01-2 0z" fill="#fff"></path><path d="M8 1.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 018 1.5z" fill="#fff"></path></svg></button></div></div></div></div><div class="Features_feature__XeHmu Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Features_featureContainer__1ZC3-"><div class="Features_featureContent__2tRH-"><div class="Features_square__1T5Ph"></div></div><div class="Features_featureDetails__E3ihm"><h4 class="Heading_heading__3iQQf Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Gestures</h4><div class="Features_featureButtons__3zcTZ"><button aria-label="Open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7 7a1 1 0 012 0v7a1 1 0 01-2 0z" fill="#fff"></path><path d="M8 1.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 018 1.5z" fill="#fff"></path></svg></button></div></div></div></div><div class="Features_feature__XeHmu Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Features_featureContainer__1ZC3-"><div class="Features_featureContent__2tRH-"><div class="Features_square__1T5Ph Features_transparentSquare__XuKd1"><div class="Features_squareContainer__2t0MR Features_dragSquareContainer__1-E4D"><div class="Features_square__1T5Ph Features_dragSquare__1dlNP" draggable="false" style="-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;touch-action:none"></div></div></div></div><div class="Features_featureDetails__E3ihm"><h4 class="Heading_heading__3iQQf Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Drag</h4><div class="Features_featureButtons__3zcTZ"><button aria-label="Open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7 7a1 1 0 012 0v7a1 1 0 01-2 0z" fill="#fff"></path><path d="M8 1.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 018 1.5z" fill="#fff"></path></svg></button></div></div></div></div><div class="Features_feature__XeHmu Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Features_featureContainer__1ZC3-"><div class="Features_featureContent__2tRH-"><div class="Features_scrollContainer__2Pfzu"><div style="transform:scale(0.2) translateZ(0)" class="Features_square__1T5Ph Features_transparentSquare__XuKd1"><div style="transform:scaleY(0) translateZ(0)" class="Features_scrollPercentage__1BUZE"></div></div></div></div><div class="Features_featureDetails__E3ihm"><h4 class="Heading_heading__3iQQf Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Scroll</h4><div class="Features_featureButtons__3zcTZ"><button aria-label="Open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7 7a1 1 0 012 0v7a1 1 0 01-2 0z" fill="#fff"></path><path d="M8 1.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 018 1.5z" fill="#fff"></path></svg></button></div></div></div></div><div class="Features_feature__XeHmu Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Features_featureContainer__1ZC3-"><div class="Features_featureContent__2tRH-"><div class="Features_square__1T5Ph Features_transparentSquare__XuKd1"><div class="Features_squareContainer__2t0MR"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="Features_pathLogo__2L-XA"><path d="M0 100V0l50 50 50-50v100L75 75l-25 25-25-25z" opacity="0" fill="rgba(255, 255, 255, 0)"></path></svg></div></div></div><div class="Features_featureDetails__E3ihm"><h4 class="Heading_heading__3iQQf Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Path</h4><div class="Features_featureButtons__3zcTZ"><button aria-label="Restart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.2 4.654V2a.7.7 0 111.4 0v5a.7.7 0 01-.7.7h-5a.7.7 0 110-1.4h3.573a4.845 4.845 0 00-4.53-3.1C5.266 3.2 3.1 5.35 3.1 8s2.167 4.8 4.842 4.8a4.849 4.849 0 003.426-1.408.7.7 0 01.986.994A6.244 6.244 0 017.942 14.2C4.496 14.2 1.7 11.426 1.7 8s2.796-6.2 6.242-6.2A6.261 6.261 0 0113.2 4.654z" fill="#fff"></path></svg></button><button aria-label="Open"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7 7a1 1 0 012 0v7a1 1 0 01-2 0z" fill="#fff"></path><path d="M8 1.5a1.5 1.5 0 11-.001 3.001A1.5 1.5 0 018 1.5z" fill="#fff"></path></svg></button></div></div></div></div></div></div><h2 class="Heading_heading__3iQQf level-3 Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:160px">Production-ready declarative animations.</h2><p class="Text_text__2SNS0 size-large Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:1rem;font-weight:500;--text-color:var(--system-palette-white60)">A simple declarative syntax means you write less code. Less code means your codebase is easier to read and maintain.</p><div class="motion_interaction__2Im9C Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:3rem;--aspect-ratio:54%"><div class="motion_interactionContent__1eDPM"><div class="Declarative_container__3HnN1 Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Declarative_preview__36jai"><p class="Declarative_explainer__HCKx_ Text_text__2SNS0 size-small Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za" style="text-align:center;margin-top:0;margin-bottom:0">Tweak the parameters to animate.</p><div class="Declarative_square__2woHp" style="transform:none"></div></div><div class="Declarative_code__2bjtS"><div class="Declarative_codeBlock__3Gajb CodeBlock_codeBlock__30DsN code-block Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><pre class="prism-code language-jsx"><code class=""><div class="token-line
+                  line
+                "><span class="token tag punctuation">&lt;</span><span class="token tag">motion.div</span><span class="token tag"></span></div><div class="token-line
+                  line
+                "><span class="token tag">  </span><span class="token tag attr-name">animate</span><span class="token tag script language-javascript script-punctuation punctuation">=</span><span class="token tag script language-javascript punctuation">{</span><span class="token tag script language-javascript punctuation">{</span><span class="token tag script language-javascript"></span></div><div class="token-line
+                  line
+                "><span class="token tag script language-javascript">    x</span><span class="token tag script language-javascript operator">:</span><span class="token tag script language-javascript"> </span><span class="token tag script language-javascript number">0</span><span class="token tag script language-javascript punctuation">,</span><span class="token tag script language-javascript"></span></div><div class="token-line
+                  line
+                "><span class="token tag script language-javascript">    y</span><span class="token tag script language-javascript operator">:</span><span class="token tag script language-javascript"> </span><span class="token tag script language-javascript number">0</span><span class="token tag script language-javascript punctuation">,</span><span class="token tag script language-javascript"></span></div><div class="token-line
+                  line
+                "><span class="token tag script language-javascript">    scale</span><span class="token tag script language-javascript operator">:</span><span class="token tag script language-javascript"> </span><span class="token tag script language-javascript number">1</span><span class="token tag script language-javascript punctuation">,</span><span class="token tag script language-javascript"></span></div><div class="token-line
+                  line
+                "><span class="token tag script language-javascript">    rotate</span><span class="token tag script language-javascript operator">:</span><span class="token tag script language-javascript"> </span><span class="token tag script language-javascript number">0</span><span class="token tag script language-javascript punctuation">,</span><span class="token tag script language-javascript"></span></div><div class="token-line
+                  line
+                "><span class="token tag script language-javascript">  </span><span class="token tag script language-javascript punctuation">}</span><span class="token tag script language-javascript punctuation">}</span><span class="token tag"></span></div><div class="token-line
+                  line
+                "><span class="token tag"></span><span class="token tag punctuation">/&gt;</span></div></code></pre></div><div class="Declarative_parameters__2gYIt"><div class="Declarative_parameterRow__1udou"><label class="Declarative_parameterLabel__3rapq" for="x">X</label><div class="Declarative_parameter__1CtFd"><span class="Input_input__1eVN8 fluid size-small" style="--input-focus-border:#d2c"><input type="number" class="Input_base__3dsU8" value="0" id="x" placeholder=""/></span></div><input type="range" class="Declarative_parameterRange__2qalo Declarative_parameterRangePosition__3Nd-9" value="0" min="-100" max="100" style="--input-progress:hsl(0, 0%, 19%)"/></div><div class="Declarative_parameterRow__1udou"><label class="Declarative_parameterLabel__3rapq" for="y">Y</label><div class="Declarative_parameter__1CtFd"><span class="Input_input__1eVN8 fluid size-small" style="--input-focus-border:#d2c"><input type="number" class="Input_base__3dsU8" value="0" id="y" placeholder=""/></span></div><input type="range" class="Declarative_parameterRange__2qalo Declarative_parameterRangePosition__3Nd-9" value="0" min="-100" max="100" style="--input-progress:hsl(0, 0%, 19%)"/></div><div class="Declarative_parameterRow__1udou"><label class="Declarative_parameterLabel__3rapq" for="scale">Scale</label><div class="Declarative_parameter__1CtFd"><span class="Input_input__1eVN8 fluid size-small" style="--input-focus-border:#d2c"><input type="number" class="Input_base__3dsU8" step="0.1" min="0" value="1" id="scale" placeholder=""/></span></div><input type="range" class="Declarative_parameterRange__2qalo" value="1" step="0.1" min="0" max="2" style="--input-progress:linear-gradient(to right, #d2c 0%, #d2c 50%, hsl(0, 0%, 19%) 50%, hsl(0, 0%, 19%) 100%)"/></div><div class="Declarative_parameterRow__1udou"><label class="Declarative_parameterLabel__3rapq" for="rotate">Rotate</label><div class="Declarative_parameter__1CtFd"><span class="Input_input__1eVN8 fluid size-small" style="--input-focus-border:#d2c"><input type="number" class="Input_base__3dsU8" value="0" id="rotate" placeholder=""/></span></div><input type="range" class="Declarative_parameterRange__2qalo" value="0" min="0" max="360" style="--input-progress:linear-gradient(to right, #d2c 0%, #d2c 0%, hsl(0, 0%, 19%) 0%, hsl(0, 0%, 19%) 100%)"/></div></div></div></div></div></div><h2 class="Heading_heading__3iQQf level-3 Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:160px">Animations that work like magic.</h2><p class="Text_text__2SNS0 size-large Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:1rem;font-weight:500;--text-color:var(--system-palette-white60)">When animating between two separate components, Framer Motion will take care of everything in between.</p><div class="motion_interaction__2Im9C alternate Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:3rem;--aspect-ratio:46%"><div class="motion_interactionContent__1eDPM"><div class="Layout_container__xTDvX Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Layout_preview__1CrRH"><p class="Layout_explainer__2RvVJ Text_text__2SNS0 size-small Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za" style="text-align:center;margin-top:0;margin-bottom:0">Tap to open a card.</p><ul class="Layout_gallery__3xuZW"><li class="Layout_item__1IWEB" style="border-radius:0.6rem"><div class="Layout_placeholder__oaUhB"><div></div><div></div><div></div></div><div class="Layout_additional__2O1dX"><div></div><div></div><div></div></div><div class="Layout_itemClose__181fK"></div></li><li class="Layout_item__1IWEB" style="border-radius:0.6rem"><div class="Layout_placeholder__oaUhB"><div></div><div></div><div></div></div><div class="Layout_additional__2O1dX"><div></div><div></div><div></div></div><div class="Layout_itemClose__181fK"></div></li><li class="Layout_item__1IWEB" style="border-radius:0.6rem"><div class="Layout_placeholder__oaUhB"><div></div><div></div><div></div></div><div class="Layout_additional__2O1dX"><div></div><div></div><div></div></div><div class="Layout_itemClose__181fK"></div></li><li class="Layout_item__1IWEB" style="border-radius:0.6rem"><div class="Layout_placeholder__oaUhB"><div></div><div></div><div></div></div><div class="Layout_additional__2O1dX"><div></div><div></div><div></div></div><div class="Layout_itemClose__181fK"></div></li></ul></div><div class="Layout_code__1158M"><div class="Layout_codeBlock__23T0Y CodeBlock_codeBlock__30DsN code-block Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><pre class="prism-code language-jsx"><code class=""><div class="token-line
+                  line
+                "><span class="token keyword">const</span><span class="token plain"> </span><span class="token punctuation">[</span><span class="token plain">selectedId</span><span class="token punctuation">,</span><span class="token plain"> setSelectedId</span><span class="token punctuation">]</span><span class="token plain"> </span><span class="token operator">=</span><span class="token plain"> </span><span class="token function">useState</span><span class="token punctuation">(</span><span class="token parameter keyword">null</span><span class="token punctuation">)</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain"> </span></div><div class="token-line
+                  line
+                "><span class="token plain"></span><span class="token punctuation">{</span><span class="token plain">items</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token plain"> </span><span class="token operator">=&gt;</span><span class="token plain"> </span><span class="token punctuation">(</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">  </span><span class="token tag punctuation">&lt;</span><span class="token tag">motion.div</span><span class="token tag"> </span><span class="token tag attr-name">layoutId</span><span class="token tag script language-javascript script-punctuation punctuation">=</span><span class="token tag script language-javascript punctuation">{</span><span class="token tag script language-javascript">item</span><span class="token tag script language-javascript punctuation">.</span><span class="token tag script language-javascript">id</span><span class="token tag script language-javascript punctuation">}</span><span class="token tag"> </span><span class="token tag attr-name">onClick</span><span class="token tag script language-javascript script-punctuation punctuation">=</span><span class="token tag script language-javascript punctuation">{</span><span class="token tag script language-javascript punctuation">(</span><span class="token tag script language-javascript punctuation">)</span><span class="token tag script language-javascript"> </span><span class="token tag script language-javascript operator">=&gt;</span><span class="token tag script language-javascript"> </span><span class="token tag script language-javascript function">setSelectedId</span><span class="token tag script language-javascript punctuation">(</span><span class="token tag script language-javascript">item</span><span class="token tag script language-javascript punctuation">.</span><span class="token tag script language-javascript">id</span><span class="token tag script language-javascript punctuation">)</span><span class="token tag script language-javascript punctuation">}</span><span class="token tag punctuation">&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">    </span><span class="token tag punctuation">&lt;</span><span class="token tag">motion.h5</span><span class="token tag punctuation">&gt;</span><span class="token punctuation">{</span><span class="token plain">item</span><span class="token punctuation">.</span><span class="token plain">subtitle</span><span class="token punctuation">}</span><span class="token tag punctuation">&lt;/</span><span class="token tag">motion.h5</span><span class="token tag punctuation">&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">    </span><span class="token tag punctuation">&lt;</span><span class="token tag">motion.h2</span><span class="token tag punctuation">&gt;</span><span class="token punctuation">{</span><span class="token plain">item</span><span class="token punctuation">.</span><span class="token plain">title</span><span class="token punctuation">}</span><span class="token tag punctuation">&lt;/</span><span class="token tag">motion.h2</span><span class="token tag punctuation">&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">  </span><span class="token tag punctuation">&lt;/</span><span class="token tag">motion.div</span><span class="token tag punctuation">&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain"></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">
+</span></div><div class="token-line
+                  line
+                "><span class="token plain"></span><span class="token tag punctuation">&lt;</span><span class="token tag class-name">AnimatePresence</span><span class="token tag punctuation">&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">  </span><span class="token punctuation">{</span><span class="token plain">selectedId </span><span class="token operator">&amp;&amp;</span><span class="token plain"> </span><span class="token punctuation">(</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">    </span><span class="token tag punctuation">&lt;</span><span class="token tag">motion.div</span><span class="token tag"> </span><span class="token tag attr-name">layoutId</span><span class="token tag script language-javascript script-punctuation punctuation">=</span><span class="token tag script language-javascript punctuation">{</span><span class="token tag script language-javascript">selectedId</span><span class="token tag script language-javascript punctuation">}</span><span class="token tag punctuation">&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">      </span><span class="token tag punctuation">&lt;</span><span class="token tag">motion.h5</span><span class="token tag punctuation">&gt;</span><span class="token punctuation">{</span><span class="token plain">item</span><span class="token punctuation">.</span><span class="token plain">subtitle</span><span class="token punctuation">}</span><span class="token tag punctuation">&lt;/</span><span class="token tag">motion.h5</span><span class="token tag punctuation">&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">      </span><span class="token tag punctuation">&lt;</span><span class="token tag">motion.h2</span><span class="token tag punctuation">&gt;</span><span class="token punctuation">{</span><span class="token plain">item</span><span class="token punctuation">.</span><span class="token plain">title</span><span class="token punctuation">}</span><span class="token tag punctuation">&lt;/</span><span class="token tag">motion.h2</span><span class="token tag punctuation">&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">      </span><span class="token tag punctuation">&lt;</span><span class="token tag">motion.button</span><span class="token tag"> </span><span class="token tag attr-name">onClick</span><span class="token tag script language-javascript script-punctuation punctuation">=</span><span class="token tag script language-javascript punctuation">{</span><span class="token tag script language-javascript punctuation">(</span><span class="token tag script language-javascript punctuation">)</span><span class="token tag script language-javascript"> </span><span class="token tag script language-javascript operator">=&gt;</span><span class="token tag script language-javascript"> </span><span class="token tag script language-javascript function">setSelectedId</span><span class="token tag script language-javascript punctuation">(</span><span class="token tag script language-javascript keyword">null</span><span class="token tag script language-javascript punctuation">)</span><span class="token tag script language-javascript punctuation">}</span><span class="token tag"> </span><span class="token tag punctuation">/&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">    </span><span class="token tag punctuation">&lt;/</span><span class="token tag">motion.div</span><span class="token tag punctuation">&gt;</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain">  </span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain"></span></div><div class="token-line
+                  line
+                "><span class="token plain"></span><span class="token tag punctuation">&lt;/</span><span class="token tag class-name">AnimatePresence</span><span class="token tag punctuation">&gt;</span></div></code></pre></div></div></div></div></div><h2 class="Heading_heading__3iQQf level-3 Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:160px">Complex events and gestures.</h2><p class="Text_text__2SNS0 size-large Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:1rem;font-weight:500;--text-color:var(--system-palette-white60)">Framer Motion offers more advanced listeners and also extends the basic set of React event listeners.</p><div class="motion_interaction__2Im9C Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za margin-top" style="--margin-top:3rem;--aspect-ratio:49.4%"><div class="motion_interactionContent__1eDPM"><div class="Gestures_container__3HhMp Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za"><div class="Gestures_preview__3uAkK"><p class="Gestures_explainer__1vJKU Text_text__2SNS0 size-small Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za" style="text-align:center;margin-top:0;margin-bottom:0">Tap and drag the circle.</p><div class="Gestures_constraints__ojpFl"><div class="Gestures_circle__3SXzg" draggable="false" style="-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;touch-action:none"></div></div></div><ul class="Gestures_console__zYrY6"><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onTapCancel</span><span class="Gestures_consoleValues__HDYS5">point: { x: 544, y: 4627 }</span></li><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onDragEnd</span><span class="Gestures_consoleValues__HDYS5">point: { x: 7, y: -2 }, delta: { x: 0, y: 0 }, offset: { x: 7, y: -2 }</span></li><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onDrag</span><span class="Gestures_consoleValues__HDYS5">point: { x: 7, y: -2 }, delta: { x: 0, y: 0 }, offset: { x: 7, y: -2 }</span></li><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onDrag</span><span class="Gestures_consoleValues__HDYS5">point: { x: 6, y: -2 }, delta: { x: 0, y: 0 }, offset: { x: 6, y: -2 }</span></li><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onDrag</span><span class="Gestures_consoleValues__HDYS5">point: { x: 6, y: -2 }, delta: { x: 0, y: 0 }, offset: { x: 6, y: -2 }</span></li><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onDrag</span><span class="Gestures_consoleValues__HDYS5">point: { x: 6, y: -2 }, delta: { x: 0, y: 0 }, offset: { x: 6, y: -2 }</span></li><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onDrag</span><span class="Gestures_consoleValues__HDYS5">point: { x: 6, y: -2 }, delta: { x: 0, y: 0 }, offset: { x: 6, y: -2 }</span></li><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onDrag</span><span class="Gestures_consoleValues__HDYS5">point: { x: 6, y: -2 }, delta: { x: 0, y: 0 }, offset: { x: 6, y: -2 }</span></li><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onDragStart</span><span class="Gestures_consoleValues__HDYS5">point: { x: 0, y: 0 }, delta: { x: 3, y: -1 }, offset: { x: 3, y: -1 }</span></li><li class="Gestures_consoleRow__1ZnMR placeholder"><span class="Gestures_consoleName__lJH8V">onTapStart</span><span class="Gestures_consoleValues__HDYS5">point: { x: 537, y: 4629 }</span></li></ul></div></div></div></div></div></main><footer id="__footer" class="Footer_footer__cAlbN footer withBorder variant-default"><div class="Container_container__1h3U7 container size-default Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd"><div class="Footer_addendum__VJ7zj"><p>Copyright © 2022 Framer B.V.</p><ul><li><button>Cookies</button></li><li><a href="/legal/security/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Security</a></li><li><a href="/legal/terms-of-service/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Terms of Service</a></li><li><a href="/legal/privacy-statement/" data-link="true" class="Box_box__1i6cI Box_box-background__32N6t Box_box-color__2H1xd Box_box-width__2C7Za">Privacy Statement</a></li></ul></div></div></footer><div class="BottomContainer_container__2nOq0"><div class="Toasts_toasts__1bifL"></div></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"data":{"motion":[{"pages":[{"page":{"title":"Introduction","subtitle":"Get started with Framer Motion and learn by exploring interactive examples.","slug":"introduction"}},{"page":{"subtitle":"Simple examples for animation, gestures, components, transforms and more.","slug":"examples","title":"Examples"}}],"category":{"title":"Getting started"}},{"category":{"title":"Animation"},"pages":[{"page":{"title":"Animation","subtitle":"How to animate in Framer Motion.","slug":"animation"},"title":"Overview"},{"title":"Layout","page":{"title":"Layout animations","subtitle":"Create layout and shared layout animations with React and Framer Motion.","slug":"layout-animations"}},{"page":{"subtitle":"A powerful gesture recognition system for the browser.","slug":"gestures","title":"Gestures"}},{"page":{"subtitle":"How to create scroll-linked and scroll-triggered animations in Framer Motion.","slug":"scroll-animations","title":"Scroll animations"},"title":"Scroll"},{"page":{"subtitle":"A transition defines how values animate from one state to another.","slug":"transition","title":"Transition"}}]},{"pages":[{"title":"motion","page":{"subtitle":"Motion components are DOM primitives optimised for 60fps animation and gestures.","slug":"component","title":"Motion components"}},{"page":{"title":"AnimatePresence","subtitle":"Animate components when they're removed from the React tree.","slug":"animate-presence"}},{"page":{"subtitle":"Group motion components that should perform layout animations together.","slug":"layout-group","title":"LayoutGroup"}},{"page":{"title":"LazyMotion","subtitle":"Reduce bundle size by lazy-loading a subset of Motion's features.","slug":"lazy-motion"}},{"page":{"subtitle":"Set configuration options for Framer Motion.","slug":"motion-config","title":"MotionConfig"}},{"page":{"subtitle":"Create drag-to-reorder effects with a simple set of components.","slug":"reorder","title":"Reorder"}}],"category":{"title":"Components"}},{"category":{"title":"Motion values"},"pages":[{"page":{"title":"Motion values overview","subtitle":"Motion values track the state and velocity of animating values.","slug":"motionvalue"},"title":"Overview"},{"page":{"subtitle":"Subscribe to motion value events from a React component.","slug":"use-motion-value-event","title":"useMotionValueEvent"}},{"page":{"subtitle":"Combine multiple motion values into a new one via string template.","slug":"use-motion-template","title":"useMotionTemplate"}},{"page":{"title":"useScroll","subtitle":"Create scroll-linked animations with the useScroll hook.","slug":"use-scroll"}},{"page":{"slug":"use-spring","title":"useSpring","subtitle":"A motion value that animates to its target with a spring."}},{"page":{"slug":"use-time","title":"useTime","subtitle":"A motion value that updates every animation frame with the duration, in ms, since it was created."}},{"page":{"subtitle":"Create a new motion value that transforms the output of one or more other motion values. ","slug":"use-transform","title":"useTransform"}},{"page":{"title":"useVelocity","subtitle":"Create a motion value that tracks the velocity of another.","slug":"use-velocity"}},{"page":{"subtitle":"Automatically manage the will-change CSS property to optimise performance.","slug":"use-will-change","title":"useWillChange"}}]},{"category":{"title":"Hooks"},"pages":[{"page":{"subtitle":"Create an animate function with scoped selectors and automatic cleanup.","slug":"use-animate","title":"useAnimate"}},{"page":{"title":"useAnimationFrame","subtitle":"An animation loop that outputs the latest frame time to the provided callback.","slug":"use-animation-frame"}},{"page":{"slug":"use-drag-controls","title":"useDragControls","subtitle":"Manually start/stop dragging on a motion component."}},{"page":{"slug":"use-in-view","title":"useInView","subtitle":"A simple state hook for when an element is within the viewport."}},{"page":{"subtitle":"A hook that determines whether the user prefers reduced motion.","slug":"use-reduced-motion","title":"useReducedMotion"}}]},{"category":{"title":"Universal"},"pages":[{"page":{"title":"animate","subtitle":"A function to manually start and control animations","slug":"animate-function"}},{"page":{"title":"scroll","subtitle":"Create high performance scroll-linked animations.","slug":"scroll-function"}},{"page":{"title":"inView","subtitle":"Trigger a callback when elements enter and leave the viewport.","slug":"in-view"}},{"page":{"title":"transform","subtitle":"Create a function that will map a value from one range to another.","slug":"transform-function"}},{"page":{"slug":"stagger","title":"stagger","subtitle":"A function for staggering animations across elements."}},{"page":{"title":"frame","subtitle":"Schedule a function to run on Motion's animation loop.","slug":"frame"}},{"page":{"title":"Easing functions","subtitle":"A powerful set of easing functions that can be used with any animation library","slug":"easing-functions"}}]},{"category":{"title":"3D","framer":false},"pages":[{"page":{"title":"3D: Introduction","subtitle":"Get started with Framer Motion 3D","slug":"three-introduction"},"title":"Introduction"},{"page":{"title":"LayoutCamera","subtitle":"A perspective camera that integrates React Three Fiber with Framer Motion's layout animations.","slug":"layoutcamera"}},{"page":{"slug":"layoutorthographiccamera","title":"LayoutOrthographicCamera","subtitle":"An orthographic camera that integrates with Framer Motion's layout animations."}},{"page":{"slug":"motioncanvas","title":"MotionCanvas","subtitle":"A Canvas component for linking Framer Motion with Framer Motion 3D."}}]},{"category":{"title":"Guides"},"pages":[{"page":{"title":"Accessibility","subtitle":"How to design accessible animations with Framer Motion.","slug":"guide-accessibility"}},{"page":{"title":"Reduce bundle size","subtitle":"Learn what makes up Motion's bundle size, and how to reduce it.","slug":"guide-reduce-bundle-size"}},{"page":{"subtitle":"How to upgrade to the latest version of Framer Motion.","slug":"guide-upgrade","title":"Upgrade guides"}}]}],"framer":[]},"settings":{"preview":false,"searchConfiguration":{"sections":[{"label":"Suggestions","items":[{"label":"Support","href":"/support"},{"label":"Tutorials","href":"/tutorials"},{"label":"Desktop App","href":"/desktop"},{"label":"Desktop Prototyping","href":"/desktop-prototyping/"}]}],"context":"default","placeholder":"Search framer.com"},"searchContexts":["docs"],"theme":"dark","colorPrimary":"var(--system-palette-sky)","navigationWordmark":"Motion","navigationWordmarkHref":"/motion","subnavigation":{"template":"docs"}},"social":{"title":"Documentation","secondaryTitle":"Framer for Developers","description":"An open source, production-ready motion library for React on the web.","image":"/images/social/api.png"}},"__N_SSG":true},"page":"/motion","query":{},"buildId":"AUvxChJGHhZSjsWsNZlWG","isFallback":false,"dynamicIds":[79235],"gsp":true,"scriptLoader":[]}</script></body></html>
